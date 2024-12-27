@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 class methods:
 
+    @staticmethod
     def get_image(file_path):
         """
         creates numpy array with odd sizes from image
@@ -14,6 +15,7 @@ class methods:
 
         return image
 
+    @staticmethod
     def create_grating(size, kx, ky):
         """
         Creates a sinusoidal grating for the given spatial frequencies (kx, ky).
@@ -26,6 +28,7 @@ class methods:
 
         return grating
 
+    @staticmethod
     def reconstruct_image(k_space):
         """
         Applies Inverse Fourier Transform to reconstruct the image.
@@ -35,6 +38,7 @@ class methods:
 
 class mriScan:
 
+    @staticmethod
     def compute_k_space_using_gratings(image, max_frequency):
         """
         Compute k-space by dot product of the image with sinusoidal gratings for each kx, ky.
@@ -57,6 +61,7 @@ class mriScan:
 
         return k_space
 
+    @staticmethod
     def compute_k_space_showing_steps(image, max_frequency):
         """
         Compute k-space by dot product of the image with sinusoidal gratings for each kx, ky.
@@ -100,6 +105,7 @@ class mriScan:
 
 class visualise:
 
+    @staticmethod
     def visualize_results(image, k_space, reconstructed_image):
         """
         Visualizes the phantom (spatial domain), k-space, and reconstructed image.
